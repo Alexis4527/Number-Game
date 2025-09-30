@@ -1,16 +1,3 @@
-//=============================================================================
-// PROGRAMMER: Alexis Willey
-// PANTHER ID: 6447592
-//
-// CLASS: COP4655
-// SECTION: Your class section: RVC
-// SEMESTER: The current semester: Fall 2025
-//
-// CERTIFICATION: I certify that this work is my own and that
-// none of it is the work of any other person.
-//=============================================================================
-
-
 import SwiftUI
 
 struct ContentView: View {
