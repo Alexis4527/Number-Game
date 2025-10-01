@@ -33,7 +33,7 @@ struct ContentView: View {
                         .frame(width: 100, height: 100)
                 }
                 Spacer()
-                VStack { //stack or any section
+                VStack { //stack for ant section
                     Text("Random Number")
                     Text("\(AntNumber)")
                     Image(systemName: "ant")
@@ -48,7 +48,7 @@ struct ContentView: View {
                 Spacer()
             }
            
-            HStack { //stack for the button
+            HStack { 
                 Button(action: {
                     LadybugNumber = Int.random(in: 1...999)
                     AntNumber = Int.random(in: 1...999)
