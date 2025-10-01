@@ -1,5 +1,5 @@
 import SwiftUI
-
+//set states and varibles
 struct ContentView: View {
     @State private var GameNumber = Int.random(in: 1...999)
     @State private var winGame = 0
@@ -13,15 +13,15 @@ struct ContentView: View {
     @State private var PlayCount = 0
 
     var body: some View {
-        VStack {
+        VStack { //main design stack
             Spacer()
                 .frame(width: 140, height: 150, alignment: .center)
 
-            HStack {
+            HStack { //stack for the ladybug and ant sections
                 
                 Spacer()
                 
-                VStack {
+                VStack { //stack for ladybug section
                     Text("Random Number")
                     Text("\(LadybugNumber)")
                     Image(systemName: "ladybug")
@@ -33,7 +33,7 @@ struct ContentView: View {
                         .frame(width: 100, height: 100)
                 }
                 Spacer()
-                VStack {
+                VStack { //stack or any section
                     Text("Random Number")
                     Text("\(AntNumber)")
                     Image(systemName: "ant")
@@ -48,17 +48,17 @@ struct ContentView: View {
                 Spacer()
             }
            
-            HStack {
+            HStack { //stack for the button
                 Button(action: {
                     LadybugNumber = Int.random(in: 1...999)
                     AntNumber = Int.random(in: 1...999)
                     GameNumber = Int.random(in: 1...999)
-                    PlayCount += 1
+                    PlayCount += 1 //play count goes up 1 per click
 
-                    if LadybugNumber > GameNumber {
+                    if LadybugNumber > GameNumber { //if ladybug is higher then game add a point to ladybug
                         winCountLadyBug += 1
                     }
-                    if AntNumber > GameNumber {
+                    if AntNumber > GameNumber { //if ant is higher then game give a point to ant
                         winCountAnt += 1
                     }
                 }) {
@@ -78,7 +78,7 @@ struct ContentView: View {
             
             Spacer()
         
-            Text("Number of times played: \(PlayCount)")
+            Text("Number of times played: \(PlayCount)") //display playcount
                     
                     
                 }
